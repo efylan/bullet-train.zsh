@@ -40,7 +40,7 @@ fi
 
 # PROMPT
 if [ ! -n "${BULLETTRAIN_PROMPT_CHAR+1}" ]; then
-  BULLETTRAIN_PROMPT_CHAR="\$"
+  BULLETTRAIN_PROMPT_CHAR="★"
 fi
 if [ ! -n "${BULLETTRAIN_PROMPT_ROOT+1}" ]; then
   BULLETTRAIN_PROMPT_ROOT=true
@@ -68,10 +68,10 @@ fi
 
 # TIME
 if [ ! -n "${BULLETTRAIN_TIME_BG+1}" ]; then
-  BULLETTRAIN_TIME_BG=white
+  BULLETTRAIN_TIME_BG=cyan
 fi
 if [ ! -n "${BULLETTRAIN_TIME_FG+1}" ]; then
-  BULLETTRAIN_TIME_FG=black
+  BULLETTRAIN_TIME_FG=white
 fi
 
 # CUSTOM
@@ -175,7 +175,7 @@ fi
 
 # DIR
 if [ ! -n "${BULLETTRAIN_DIR_BG+1}" ]; then
-  BULLETTRAIN_DIR_BG=blue
+  BULLETTRAIN_DIR_BG=green
 fi
 if [ ! -n "${BULLETTRAIN_DIR_FG+1}" ]; then
   BULLETTRAIN_DIR_FG=white
@@ -223,10 +223,10 @@ fi
 
 # CONTEXT
 if [ ! -n "${BULLETTRAIN_CONTEXT_BG+1}" ]; then
-  BULLETTRAIN_CONTEXT_BG=black
+  BULLETTRAIN_CONTEXT_BG=white
 fi
 if [ ! -n "${BULLETTRAIN_CONTEXT_FG+1}" ]; then
-  BULLETTRAIN_CONTEXT_FG=default
+  BULLETTRAIN_CONTEXT_FG=cyan
 fi
 if [ ! -n "${BULLETTRAIN_CONTEXT_HOSTNAME+1}" ]; then
   BULLETTRAIN_CONTEXT_HOSTNAME=%m
@@ -304,7 +304,7 @@ if [ ! -n "${BULLETTRAIN_SCREEN_BG+1}" ]; then
   BULLETTRAIN_SCREEN_BG=white
 fi
 if [ ! -n "${BULLETTRAIN_SCREEN_FG+1}" ]; then
-  BULLETTRAIN_SCREEN_FG=black
+  BULLETTRAIN_SCREEN_FG=blue
 fi
 if [ ! -n "${BULLETTRAIN_SCREEN_PREFIX+1}" ]; then
   BULLETTRAIN_SCREEN_PREFIX="⬗"
@@ -318,7 +318,7 @@ if [ ! -n "${BULLETTRAIN_EXEC_TIME_BG+1}" ]; then
   BULLETTRAIN_EXEC_TIME_BG=yellow
 fi
 if [ ! -n "${BULLETTRAIN_EXEC_TIME_FG+1}" ]; then
-  BULLETTRAIN_EXEC_TIME_FG=black
+  BULLETTRAIN_EXEC_TIME_FG=white
 fi
 
 
@@ -634,7 +634,7 @@ prompt_status() {
 
 # Prompt Character
 prompt_chars() {
-  local bt_prompt_chars="${BULLETTRAIN_PROMPT_CHAR}"
+  local bt_prompt_chars="%F{yellow}${BULLETTRAIN_PROMPT_CHAR}%f"
 
   if [[ $BULLETTRAIN_PROMPT_ROOT == true ]]; then
     bt_prompt_chars="%(!.%F{red}# .%F{green}${bt_prompt_chars}%f)"
