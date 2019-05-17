@@ -175,7 +175,7 @@ fi
 
 # DIR
 if [ ! -n "${BULLETTRAIN_DIR_BG+1}" ]; then
-  BULLETTRAIN_DIR_BG=blue
+  BULLETTRAIN_DIR_BG=green
 fi
 if [ ! -n "${BULLETTRAIN_DIR_FG+1}" ]; then
   BULLETTRAIN_DIR_FG=white
@@ -226,7 +226,7 @@ if [ ! -n "${BULLETTRAIN_CONTEXT_BG+1}" ]; then
   BULLETTRAIN_CONTEXT_BG=white
 fi
 if [ ! -n "${BULLETTRAIN_CONTEXT_FG+1}" ]; then
-  BULLETTRAIN_CONTEXT_FG=blue
+  BULLETTRAIN_CONTEXT_FG=cyan
 fi
 if [ ! -n "${BULLETTRAIN_CONTEXT_HOSTNAME+1}" ]; then
   BULLETTRAIN_CONTEXT_HOSTNAME=%m
